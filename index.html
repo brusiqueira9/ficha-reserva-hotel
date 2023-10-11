@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Hotel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.71/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.71/vfs_fonts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <a href="https://i.ibb.co/ZTfL7v7/LOGO-AGROCP-COMPLETA.png" target="_blank">
+                <img src="https://i.ibb.co/ZTfL7v7/LOGO-AGROCP-COMPLETA.png" alt="Logo Agrocp" id="logo">
+            </a>
+            Reserva de Hotel
+        </h1>
+        <form id="bookingForm">
+            <!-- Campos para a reserva do hotel -->
+            <input type="text" id="hotelName" placeholder="Nome do Hotel" required>
+            <input type="text" id="checkInDate" placeholder="Data de Entrada" required>
+            <input type="text" id="checkOutDate" placeholder="Data de Saída" required>
+            <label for="roomType">Tipo de Quarto:</label>
+            <select id="roomType">
+                <option value="duplos">Duplos</option>
+                <option value="single">Single</option>
+                <option value="triplos">Triplos</option>
+            </select>
+            <div class="option-header">Ventilador:</div>
+            <input type="radio" id="ventiladorSim" name="ventilador" value="Sim"> Sim
+            <input type="radio" id="ventiladorNao" name="ventilador" value="Não"> Não
+
+            <div class="option-header">Ar-condicionado:</div>
+            <input type="radio" id="arCondicionadoSim" name="arCondicionado" value="Sim"> Sim
+            <input type="radio" id="arCondicionadoNao" name="arCondicionado" value="Não"> Não
+
+            <div class="option-header">Faturar para Agrocp:</div>
+            <input type="radio" id="faturarParaAgrocpSim" name="faturarParaAgrocp" value="Sim"> Sim
+            <input type="radio" id="faturarParaAgrocpNao" name="faturarParaAgrocp" value="Não"> Não
+
+            <div class="option-header">Nome e Documento do Hóspede:</div>
+            <input type="text" id="nomeDoHospede" placeholder="Nome do Hóspede" required>
+            <input type="text" id="documentoDoHospede" placeholder="Documento do Hóspede" required>
+            <button type="button" class="round-button" onclick="adicionarHospede()">+</button>
+            <div id="hospedes">
+                <!-- As novas linhas de hóspedes serão adicionadas aqui -->
+            </div>
+            <button type="button" class="round-button" onclick="generatePDF()">Gerar PDF</button>
+            
+
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
