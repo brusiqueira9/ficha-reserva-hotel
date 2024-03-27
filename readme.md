@@ -1,4 +1,5 @@
 Reserva de Hotel
+
 Este é um formulário HTML para reserva de hotel que permite aos usuários inserir detalhes sobre a reserva, incluindo o nome do hotel, datas de entrada e saída, comodidades do quarto, tipo de quarto, informações sobre faturamento e detalhes dos hóspedes.
 
 Como Usar
@@ -6,6 +7,7 @@ Clone este repositório para o seu ambiente local:
 bash
 Copy code
 git clone https://seu-repositorio/reserva-de-hotel.git
+
 Abra o arquivo index.html em um navegador da web.
 
 Preencha o formulário com os detalhes da reserva, incluindo nome do hotel, datas de entrada e saída, comodidades do quarto, tipo de quarto, informações sobre faturamento e detalhes dos hóspedes.
